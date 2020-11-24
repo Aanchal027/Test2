@@ -1,0 +1,67 @@
+<p>An exception (or exceptional event) is a problem that arises during the execution of a program. When an&nbsp;<strong>Exception</strong>&nbsp;occurs the normal flow of the program is disrupted and the program/Application terminates abnormally, which is not recommended, therefore, these exceptions are to be handled.</p>
+<p>An exception can occur for many different reasons. Following are some scenarios where an exception occurs.</p>
+<ul class="list">
+<li>
+<p>A user has entered invalid data.</p>
+</li>
+<li>
+<p>A file that needs to be opened cannot be found.</p>
+</li>
+<li>
+<p>A network connection has been lost in the middle of communications or the JVM has run out of memory.</p>
+</li>
+</ul>
+<p>Some of these exceptions are caused by user error, others by programmer error, and others by physical resources that have failed in some manner.</p>
+<p>Based on these, we have three categories of Exceptions. You need to understand them to know how exception handling works in Java.</p>
+<ul class="list">
+<li>
+<p><strong>Checked exceptions</strong>&nbsp;&minus; A checked exception is an exception that is checked (notified) by the compiler at compilation-time, these are also called as compile-time exceptions. These exceptions cannot simply be ignored, the programmer should take care of (handle) these exceptions.</p>
+</li>
+</ul>
+<p>For example, if you use&nbsp;<strong>FileReader</strong>&nbsp;class in your program to read data from a file, if the file specified in its constructor doesn't exist, then a&nbsp;<em>FileNotFoundException</em>&nbsp;occurs, and the compiler prompts the programmer to handle the exception.</p>
+<h3>Example</h3>
+<div class="demo-view">&nbsp;</div>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">File</span><span class="pun">;</span>
+<span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">FileReader</span><span class="pun">;</span>
+
+<span class="kwd">public</span> <span class="kwd">class</span> <span class="typ">FilenotFound_Demo</span> <span class="pun">{</span>
+
+   <span class="kwd">public</span> <span class="kwd">static</span> <span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[])</span> <span class="pun">{</span>		
+      <span class="typ">File</span><span class="pln"> file </span><span class="pun">=</span> <span class="kwd">new</span> <span class="typ">File</span><span class="pun">(</span><span class="str">"E://file.txt"</span><span class="pun">);</span>
+      <span class="typ">FileReader</span><span class="pln"> fr </span><span class="pun">=</span> <span class="kwd">new</span> <span class="typ">FileReader</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span> 
+   <span class="pun">}</span>
+<span class="pun">}</span></pre>
+<p>If you try to compile the above program, you will get the following exceptions.</p>
+<h3><span style="color: #0000ff;">Output</span></h3>
+<pre class="result notranslate"><span style="background-color: #ffff00;">C:\&gt;javac FilenotFound_Demo.java
+FilenotFound_Demo.java:8: error: unreported exception FileNotFoundException; must be caught or declared to be thrown
+      FileReader fr = new FileReader(file);
+                      ^
+1 error
+</span></pre>
+<p><strong>Note</strong>&nbsp;&minus; Since the methods&nbsp;<strong>read()</strong>&nbsp;and&nbsp;<strong>close()</strong>&nbsp;of FileReader class throws IOException, you can observe that the compiler notifies to handle IOException, along with FileNotFoundException.</p>
+<ul class="list">
+<li>
+<p><strong>Unchecked exceptions</strong>&nbsp;&minus; An unchecked exception is an exception that occurs at the time of execution. These are also called as&nbsp;<strong>Runtime Exceptions</strong>. These include programming bugs, such as logic errors or improper use of an API. Runtime exceptions are ignored at the time of compilation.</p>
+</li>
+</ul>
+<p>For example, if you have declared an array of size 5 in your program, and trying to call the 6<sup>th</sup>&nbsp;element of the array then an&nbsp;<em>ArrayIndexOutOfBoundsExceptionexception</em>&nbsp;occurs.</p>
+<h3>Example</h3>
+<div class="demo-view">&nbsp;</div>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">public</span> <span class="kwd">class</span> <span class="typ">Unchecked_Demo</span> <span class="pun">{</span>
+   
+   <span class="kwd">public</span> <span class="kwd">static</span> <span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[])</span> <span class="pun">{</span>
+      <span class="kwd">int</span><span class="pln"> num</span><span class="pun">[]</span> <span class="pun">=</span> <span class="pun">{</span><span class="lit">1</span><span class="pun">,</span> <span class="lit">2</span><span class="pun">,</span> <span class="lit">3</span><span class="pun">,</span> <span class="lit">4</span><span class="pun">};</span>
+      <span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">num</span><span class="pun">[</span><span class="lit">5</span><span class="pun">]);</span>
+   <span class="pun">}</span>
+<span class="pun">}</span></pre>
+<p>If you compile and execute the above program, you will get the following exception.</p>
+<h3><span style="color: #0000ff;">Output</span></h3>
+<pre class="result notranslate"><span style="background-color: #ffff00;">Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
+	at Exceptions.Unchecked_Demo.main(Unchecked_Demo.java:8)
+</span></pre>
+<ul class="list">
+<li>
+<p><strong>Errors</strong>&nbsp;&minus; These are not exceptions at all, but problems that arise beyond the control of the user or the programmer. Errors are typically ignored in your code because you can rarely do anything about an error. For example, if a stack overflow occurs, an error will arise. They are also ignored at the time of compilation.</p>
+</li>
+</ul>

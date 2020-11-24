@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidjson.sqlitelogin_androidjsoncom">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.home.HtmlTopic.structure"></activity>
+        <activity android:name=".ui.home.HtmlTopic.first_webpage" />
+        <activity android:name=".ui.home.CprogTopic.types_in_cprog" />
+        <activity android:name=".ui.home.CprogTopic.comments_in_cprog" />
+        <activity android:name=".ui.home.CprogTopic.output_in_cprog" />
+        <activity android:name=".ui.home.CprogTopic.input_in_cprog" />
+        <activity android:name=".ui.home.CprogTopic.cprog_helloWorld" />
+        <activity android:name=".ui.home.CprogTopic.introduction" />
+        <activity android:name=".ui.home.CppTopic.cpp_loops" />
+        <activity android:name=".ui.home.CppTopic.data_types" />
+        <activity android:name=".ui.home.CppTopic.hello_world" />
+        <activity android:name=".ui.home.CppTopic.cpp_introduction" />
+        <activity android:name=".ui.home.JavaTopic.exception" />
+        <activity android:name=".ui.home.JavaTopic.loops" />
+        <activity android:name=".ui.home.JavaTopic.arrays" />
+        <activity android:name=".ui.home.JavaTopic.java_classes" />
+        <activity android:name=".ui.home.HtmlTopic.htmlIntroduction" />
+        <activity android:name=".ui.home.JavaTopic.javaIntroduction" />
+        <activity
+            android:name=".ui.home.CprogTopic.cprog"
+            android:label="C " />
+        <activity
+            android:name=".ui.home.HtmlTopic.html"
+            android:label="HTML" />
+        <activity
+            android:name=".ui.home.CppTopic.cpp"
+            android:label="C++" />
+        <activity
+            android:name=".ui.home.JavaTopic.Java_Home"
+            android:label="JAVA" />
+        <activity
+            android:name=".quiz.QuizMainActivity"
+            android:label="Quiz" />
+        <activity
+            android:name=".quiz.QuizActivity"
+            android:label="Quiz" />
+        <activity
+            android:name=".DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Splash"
+            android:theme="@style/ApTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/ApTheme" />
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/ApTheme" />
+        <activity android:name=".IntroActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

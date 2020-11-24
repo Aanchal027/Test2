@@ -1,0 +1,36 @@
+<p><strong><span style="font-size: 28px; color: rgb(65, 168, 95);">Data Types</span></strong></p>
+<p>C supports the following basic data types:</p>
+<p>int : integer, a whole number</p>
+<p>float: a floating point, a number with fractional part</p>
+<p>double: double-precision floating point value,</p>
+<p>char: single character.</p>
+<p><br></p>
+<p><strong><span style="font-size: 28px; color: rgb(65, 168, 95);">Variables</span></strong></p>
+<p>A variable is the name for an area in the memory.</p>
+<p>The name of a variable ( also called the identifier) must begin with either a letter or an underscore and can be composed of letters, digits and underscore character.</p>
+<p><br></p>
+<p>Example: the following statement declares an integer variable <strong>var</strong> and then assigns it the value 20.</p>
+<p>int var = 20; &nbsp;</p>
+<p><br></p>
+<p><strong><span style="font-size: 28px; color: rgb(65, 168, 95);">Constants</span></strong></p>
+<p>A <strong>constant</strong> stores a value that can not be changed from its initial assignment.</p>
+<p>By using the constant with meaningful names, code is easier to read and understand.</p>
+<p>One way to declare a constant is by using the const keyword in the variable declaration:</p>
+<p><br></p>
+<pre class="prettyprint notranslate">#include &lt;stdio.h&gt;
+
+int main() {
+<span style="color: rgb(184, 49, 47);">   </span><span style="color: rgb(0, 0, 0);">const double PI = 3.14;</span><span style="color: rgb(184, 49, 47);">
+ </span>  printf ( &quot;%f&quot;, PI ) ; 
+   return 0;
+}</pre>
+<p>The value of PI cannot be changed during the program execution.</p>
+<p><br></p>
+<p>Another way to define &nbsp;a constant is with #define pre-processor directive.</p>
+<pre class="prettyprint notranslate">#include &lt;stdio.h&gt;
+#define PI 3.14
+int main() {
+<span style="color: rgb(184, 49, 47);">   
+ </span>  printf ( &quot;%f&quot;, PI ) ; 
+   return 0;
+}</pre>

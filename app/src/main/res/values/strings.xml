@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">EinBlick</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_Logout">Logout</string>
+    <string name="action_Intro">Intro</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Contact Us</string>
+    <string name="menu_slideshow">Rating</string>
+    <string name="menu_send">Feedback</string>
+    <string name="menu_video">Video Lectures</string>
+
+    <string name="home_second">Home Second</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="textview">Test Your Knowledge!</string>
+    <string name="button">Start</string>
+    <string name="score">HighScore : 0</string>
+    <string name="score1">Score : 0</string>
+    <string name="question">Question : 1/x</string>
+    <string name="timer">00:30</string>
+
+
+</resources>

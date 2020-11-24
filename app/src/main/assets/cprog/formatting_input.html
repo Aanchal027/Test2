@@ -1,0 +1,16 @@
+<p><strong><span style="font-size: 28px; color: rgb(65, 168, 95);">Formatting Input</span></strong></p>
+<p><strong>C</strong> supports a number of ways for taking user input.</p>
+<p>The <strong>scanf()</strong> function is used to assign input to variables. A all to this function scans input according to format specifier that convert input as necessary.</p>
+<p>If input can&#39;t be converted, then the assignment isn&#39;t made.The <strong>scanf()</strong> statement waits for input and then makes assignment:</p>
+<p style="margin:35px;color:green;">int x;<br>float num;<br>char text[20];<br>scanf (&quot;%d %f &nbsp;%s&quot;, &amp;x, &amp;num, text );</p>
+<p>Typing &nbsp;a numeric value like 20, floating point value like 2.5 and a string such as &quot;abcd&quot; will be assigned to &nbsp;x , num and text.&nbsp;</p>
+<p>Note that<strong>&nbsp;&amp;</strong> must be used to access the variable addresses. The<strong>&nbsp;&amp;</strong> isn&#39;t needed for a string because a string name acts as a pointer.&nbsp;</p>
+<p>Format Specifier begin with a percent sign <strong>%</strong> and are used to assign values to corresponding arguments after control string, <strong>Blanks, tabs and newlines are ignored</strong>. Following are used with specifier for input:</p>
+<ul type="circle">
+    <li><strong>d</strong> decimal</li>
+    <li><strong>c</strong> character</li>
+    <li><strong>s</strong> string</li>
+    <li><strong>f</strong> float</li>
+    <li><strong>x</strong> hexadecimal</li>
+</ul>
+<p><br></p>
