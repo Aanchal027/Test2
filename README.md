@@ -1,12 +1,1 @@
-# EinBlick
-# EinBlick
-# EinBlick
-# test-2
-# test-2
-# test-2
-# test-2
-# test-2
-# test-2
-# test-2
-# test-2
-# test-2
+It is an Android application, named Einblick. It provides insight into various programming languages on a single platform.
